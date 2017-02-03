@@ -1,7 +1,7 @@
 #Assignment 3 - Classification
 #Otto Group Product Classification
 
-##Dataset Description##
+##Dataset Description
 
 <p>The dataset we choose to use for this assignment is Otto Group Product dataset which is obtained from <a href="https://www.kaggle.com/c/otto-group-product-classification-challenge">Kaggle</a>.There are total of 95 columns and 61878 rows.</p>
 Data fields:
@@ -13,7 +13,7 @@ Data fields:
 
 ---
 
-##Libraries needed##
+##Libraries needed
 ```{r message=FALSE}
 library(caret)
 library(tree)
@@ -195,7 +195,6 @@ NN_pred <- predict(NN_model, test_ANN[,1:93],type="class")
 confusionMatrix(test_ANN$target,NN_pred)
 ```
 
----
 
 ## Comparision between 3 classifier
 <table>
