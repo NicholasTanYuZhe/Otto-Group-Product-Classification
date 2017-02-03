@@ -584,9 +584,9 @@ We also remove the id column
 <pre class="r"><code>#Remove id because it is the same with the row number
 train_df &lt;- train_df[,-1]</code></pre>
 <hr />
-<h3>
-Choice of performance measures
-</h3>
+</div>
+<div id="choice-of-performance-measures" class="section level2">
+<h2>Choice of performance measures</h2>
 <p>
 Our choice of performance measures will be accuracy, sensitivity and specificity. We will going to use three of these to compare the results of models. We will mostly focus on accuracy for the evaluation part.
 </p>
@@ -2271,6 +2271,16 @@ confusionMatrix(test_ANN$target,NN_pred)</code></pre>
 </div>
 <div id="suggestion-as-to-why-the-classifiers-behave-differently" class="section level2">
 <h2>Suggestion as to why the classifiers behave differently</h2>
+<p>
+<p>For this question, we have excluded the decision tree created from tree package because its counterpart randomForest performs better in term of accuracy, sensitivity, and specificity.</p>
+<p>The reason why the decision tree created from randomForest has the best result because randomForest will not overfit the training set. They can average out multiple deep decision trees, trained on different parts of the same training set, with the goal of reducing the variance.</p>
+<p>The reason why the naive bayes has the worst result because naive bayes will treat all variable as independent variable. The data set that we chose have a lot of variable that are dependent on another variable.</p>
+<p>Artificial neural network(ANN) also perform better than naive bayes although randomForest having the slight edge over the ANN.</p>
+The advantage of the randomForest is that it is easy to setup the whole tree which ANN need more time and effort to setup. So in this case, the randomForest is more efficient in terms of accuracy when compared to ANN.
+</p>
+<p>
+All the assignment files are in the repository. <a href="https://github.com/NicholasTanYuZhe/Otto-Group-Product-Classification">Github</a>
+</p>
 </div>
 </div>
 
