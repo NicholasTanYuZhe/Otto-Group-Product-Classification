@@ -1,4 +1,12 @@
-#Assignment 3 - Classification
+---
+title: "Assignment 3 - Classification"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 #Otto Group Product Classification
 
 ##Dataset Description
